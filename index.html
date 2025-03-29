@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        
+        <div class="game-container">
+            <div class="hangman-container">
+                <svg height="250" width="200" class="hangman-drawing">
+                    <!-- Gallows -->
+                    <line x1="60" y1="20" x2="140" y2="20" class="gallows"></line>
+                    <line x1="140" y1="20" x2="140" y2="50" class="gallows"></line>
+                    <line x1="60" y1="20" x2="60" y2="230" class="gallows"></line>
+                    <line x1="20" y1="230" x2="100" y2="230" class="gallows"></line>
+
+                    <!-- Hangman parts (initially hidden) -->
+                    <circle cx="140" cy="70" r="20" class="hangman-part" id="head"></circle>
+                    <line x1="140" y1="90" x2="140" y2="150" class="hangman-part" id="body"></line>
+                    <line x1="140" y1="120" x2="120" y2="100" class="hangman-part" id="left-arm"></line>
+                    <line x1="140" y1="120" x2="160" y2="100" class="hangman-part" id="right-arm"></line>
+                    <line x1="140" y1="150" x2="120" y2="180" class="hangman-part" id="left-leg"></line>
+                    <line x1="140" y1="150" x2="160" y2="180" class="hangman-part" id="right-leg"></line>
+                </svg>
+            </div>
+
+            <div class="game-info">
+                <div class="word-display" id="word-display"></div>
+                <div class="attempts-info">
+                    <p>Remaining attempts: <span id="attempts">6</span></p>
+                </div>
+                <div class="message" id="message"></div>
+                <div class="guessed-letters">
+                    <p>Guessed letters: <span id="guessed-letters"></span></p>
+                </div>
+                <div class="score-display">
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="keyboard" id="keyboard"></div>
+
+        <div class="controls">
+            <button id="new-game-btn">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
