@@ -1,5 +1,8 @@
 # Hangman Game
 
+
+IT WORKS
+
 A fun and interactive Hangman game with multiple word categories, animations, and sound effects.
 
 ## How to Play
